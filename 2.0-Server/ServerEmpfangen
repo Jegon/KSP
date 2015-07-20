@@ -10,7 +10,7 @@ als aller 1. (noch im PortListener) den Usernamen
 05  request: importantNotifcations (nur 1x am !nfang)
 06  request: willkommensnachricht
 07  request: aktuelle InfoTab-Seite
-08
+08  request: aktuelle Programm pfade
 09
 10  bitte mit blablabla befreunden!
 11  Freundschaftsanfrage von xyz annehmen

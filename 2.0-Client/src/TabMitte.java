@@ -69,6 +69,7 @@ public class TabMitte extends TabPane {
             public void handle(ActionEvent actionEvent) {
                 Main.connection.writeObject("04");
                 Main.connection.writeObject("05");
+                Main.connection.writeObject("07");
             }
         });
         HBox hBox = new HBox(5);
@@ -90,10 +91,15 @@ public class TabMitte extends TabPane {
     }
 
     void rankdep(){
-        if(!Main.users.thisUser.getRang().equals("user")){
-            getTabs().add(josamilude);
-        }else
-            if(getTabs().contains(josamilude))
-                getTabs().remove(josamilude);
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                if(!Main.users.thisUser.getRang().equals("user")){
+                    getTabs().add(josamilude);
+                }else
+                if(getTabs().contains(josamilude))
+                    getTabs().remove(josamilude);
+            }
+        });
     }
 }

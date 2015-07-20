@@ -18,6 +18,7 @@ public class Main extends Application {
     public static UserVerwaltung userVerwaltung;
     private ArgReader argReader;
     static String infoTab = "http://purple.com/purple.html";
+    public static String programmcom = " | | | | |";
 
     public static boolean createPortListener(int port) {
         try {

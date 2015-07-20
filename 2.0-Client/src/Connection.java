@@ -67,10 +67,10 @@ public class Connection extends Thread {
         writeObject("05");
         writeObject("06");
         writeObject("07");
+        writeObject("08");
         while (running) {
             try {
                 Object object = objectInputStream.readObject();
-                System.out.println(object);
                 action((String) object);
             } catch (IOException ex) {
                 terminate();
@@ -104,6 +104,9 @@ public class Connection extends Thread {
                 break;
             case 6:
                 Main.rootPane.tabMitte.updateInofs(s);
+                break;
+            case 8:
+                Main.rootPane.rechteLeiste.updateProgramme(s);
                 break;
             case 10:
                 Main.rootPane.rechteLeiste.notifications.add("10" + s);

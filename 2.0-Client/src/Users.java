@@ -16,7 +16,6 @@ public class Users {
         this.users = users;
         thisUser = this.users.get(Main.username);
         thisUser.getRang();
-        Main.rootPane.rechteLeiste.updateProgramme();
         Main.rootPane.leisteOben.update();
         Main.rootPane.tabLeiste.global.refresh();
 
@@ -26,6 +25,14 @@ public class Users {
             friendl.add(this.users.get(s));
         }
         Main.rootPane.rechteLeiste.updateFriendlist(friendl);
+        if(thisUser.getRang().equals("mod") || thisUser.getRang().equals("admin")){
+            ArrayList<User> swag = new ArrayList<>();
+            Enumeration<String> enu = users.keys();
+            while(enu.hasMoreElements()){
+                swag.add(users.get(enu.nextElement()));
+            }
+            Main.rootPane.rechteLeiste.updateAlllist(swag);
+        }
 
 
         /*

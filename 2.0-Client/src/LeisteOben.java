@@ -26,13 +26,15 @@ public class LeisteOben extends StackPane {
         rechtsOben.setPadding(new Insets(5));
         label = new Label(Main.username + ": Noch nicht mit Server verbunden!");
         label.setFont(Font.font("Comic sans MS", 20));
+        Label label1 = new Label("Made by Jegon(-i)");
+        label1.setFont(Font.font("Comic sans MS", 10));
         Button minimize = new Button();
         minimize.setGraphic(new ImageView((new Image(("minimize.png")))));
         Button close = new Button();
         close.setGraphic(new ImageView(new Image("close.png")));
         linksOben.getChildren().addAll(label);
         linksOben.setAlignment(Pos.TOP_LEFT);
-        rechtsOben.getChildren().addAll(minimize, close);
+        rechtsOben.getChildren().addAll(label1, minimize, close);
         rechtsOben.setAlignment(Pos.TOP_RIGHT);
         minimize.setOnAction(new EventHandler<ActionEvent>() {
             @Override

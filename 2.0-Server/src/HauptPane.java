@@ -40,8 +40,12 @@ public class HauptPane extends GridPane {
         Button reload = new Button("Lade props neu");
         Button message = new Button("Server-MSG");
         Button infoup = new Button("Update Infotab");
+        Button programme = new Button("Programme");
         Button testButton = new Button("Test Button");
-        hBox.getChildren().addAll(startClient, reload, message, infoup, testButton);
+        hBox.getChildren().addAll(startClient, reload, message, infoup);
+        HBox hBox1 = new HBox(10);
+        this.add(hBox1, 0, 4, 2, 1);
+        hBox1.getChildren().addAll(programme, testButton);
         this.add(hBox, 0, 3, 2, 1);
         this.setHgap(10);
         this.setVgap(10);
@@ -76,6 +80,12 @@ public class HauptPane extends GridPane {
             @Override
             public void handle(ActionEvent actionEvent) {
                 Main.rootPane.setInfoTabPane();
+            }
+        });
+        programme.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Main.rootPane.setProgrammPane();
             }
         });
         testButton.setOnAction(new EventHandler<ActionEvent>() {

@@ -79,7 +79,8 @@ public class UserTreeCellFabrik extends TreeCell<String> {
                     if (user.getRang().equals("user"))
                         setGraphic(new ImageView(Icons.user_off));
                 }
-            } else
+            }
+            else
                 setGraphic(getTreeItem().getGraphic());
         }
     }

@@ -9,6 +9,7 @@ public class RootPane extends BorderPane {
     private final PortPane portPane = new PortPane();
     private final InfoPane infoPane = new InfoPane();
     private final InfoTabPane infoTabPane = new InfoTabPane();
+    private final ProgrammPane programmPane = new ProgrammPane();
 
     RootPane() {
         this.setCenter(loadingPane);
@@ -51,5 +52,11 @@ public class RootPane extends BorderPane {
         this.getChildren().removeAll(this.getChildren());
         this.setCenter(infoTabPane);
         Main.primaryStage.setTitle("Neuen Pfad für Info angeben!");
+    }
+
+    public void setProgrammPane(){
+        this.getChildren().removeAll(this.getChildren());
+        this.setCenter(programmPane);
+        Main.primaryStage.setTitle("Commands für Programme angeben!");
     }
 }

@@ -108,6 +108,9 @@ public class UserCon extends Thread {
             case 7:
                 writeObject("06" + Main.infoTab);
                 break;
+            case 8:
+                writeObject("08" + Main.programmcom);
+                break;
             case 10:
                 if(!Main.userVerwaltung.checkInit(s))
                     writeObject("12" + s + " ist kein User hier!");

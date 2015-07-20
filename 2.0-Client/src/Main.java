@@ -15,8 +15,8 @@ import java.util.logging.Logger;
  */
 public class Main extends Application {
     public static final Logger logger = Logger.getGlobal();
-    public static final String username = System.getProperty("user.name"); //todo öndern
-    //public static final String username = "swagger";
+    //public static final String username = System.getProperty("user.name"); //todo öndern
+    public static final String username = "Yolo";
     public static final Users users = new Users();
     public static Stage primaryStage;
     public static Connection connection;
