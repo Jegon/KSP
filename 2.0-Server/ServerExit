@@ -1,0 +1,9 @@
+-------------------------------------------
+---------- Server Exits ------------------- (System.exit(x);)
+-------------------------------------------
+0   Fenster wird normal geschlossen -> es wird Main.shutdown() eingeleitet
+1   Exception in der while(running)-Schleife in run() beim PortListener
+2
+3
+4
+5

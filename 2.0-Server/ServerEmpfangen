@@ -1,0 +1,19 @@
+-------------------------------------------
+---------- Server empfängt ----------------
+-------------------------------------------
+als aller 1. (noch im PortListener) den Usernamen
+00
+01
+02  request: initialisiere userhashmap nur 1x machen!!!! -> aktualisiert für alle
+03  global msg
+04  request: userhashmap aktualisieren -> nur für den Sender
+05  request: importantNotifcations (nur 1x am !nfang)
+06  request: willkommensnachricht
+07  request: aktuelle InfoTab-Seite
+08
+09
+10  bitte mit blablabla befreunden!
+11  Freundschaftsanfrage von xyz annehmen
+12  Freundschaftsanfrage von xyz ablehnen
+13  bitte mit blablabal entfreunden!
+14

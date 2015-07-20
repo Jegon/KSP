@@ -1,0 +1,24 @@
+-------------------------------------------
+---------- Client empfängt ----------------
+-------------------------------------------
+00  Server wurde geschlossen
+01  Du bist bereits mit diesem Server verbunden! -> exit
+02  initialisiere
+03  global msg
+04
+05  deletes Notifications
+06  update infos(tab)
+07
+08
+09
+10  Not:Friend: neue Frundschaftsanfrage von xyz
+11  Not:Info: Servernachricht neue Info
+12  Not:Info: Servernachricht neue Info INSTANT POPUP
+13
+14
+
+todo -cp jfx classpath option -> wird nicht gebraucht
+
+
+todo NotInfo unterschiedliche Titel + "verschwindbar"
+todo falls beide sich gegenseitig adden -> adden (sentFriendRequest)
