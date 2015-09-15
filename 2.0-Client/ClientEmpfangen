@@ -7,8 +7,8 @@
 03  global msg
 04
 05  deletes Notifications
-06  update infos(tab)
-07
+06
+07  update infos(tab)
 08  Programm Pfade / Commands
 09
 10  Not:Friend: neue Frundschaftsanfrage von xyz

@@ -106,7 +106,7 @@ public class UserCon extends Thread {
                 writeObject("11Herzlich willkommen! Dies ist nur eine Beta³ Version...");
                 break;
             case 7:
-                writeObject("06" + Main.infoTab);
+                writeObject("07" + Main.infoTab);
                 break;
             case 8:
                 writeObject("08" + Main.programmcom);
@@ -118,14 +118,18 @@ public class UserCon extends Thread {
                     if(userVerbund.user.getFriends().contains(s)){
                         writeObject("12" + "Ihr seid bereits befreundet!");
                     }else {
-                        userVerbund.removeSentFriendRequest(s);
-                        Main.userVerwaltung.allUserVerbunds.get(s).addImportantNot("10" + userVerbund.user.getUsername());
-                        if(Main.userVerwaltung.checkOnline(s)){
-                            Main.userVerwaltung.allUserVerbunds.get(s).userCon.writeObject("10" + s);
+                        if(s.equals(userVerbund.user.getUsername()))
+                            writeObject("nah, kannst dich nicht mit dir selbst befreunden");
+                        else {
+                            userVerbund.removeSentFriendRequest(s);
+                            Main.userVerwaltung.allUserVerbunds.get(s).addImportantNot("10" + userVerbund.user.getUsername());
+                            if (Main.userVerwaltung.checkOnline(s)) {
+                                Main.userVerwaltung.allUserVerbunds.get(s).userCon.writeObject("10" + s);
+                            }
+                            System.out.println("WICHTIG:" + Main.userVerwaltung.allUserVerbunds.get(s).user.getUsername());//todo remove
+                            userVerbund.addSentFriendRequest(s);
+                            writeObject("12" + "Es wurde an " + s + " eine Freundschaftsanfrage gesendet!");
                         }
-                        System.out.println("WICHTIG:" + Main.userVerwaltung.allUserVerbunds.get(s).user.getUsername());//todo remove
-                        userVerbund.addSentFriendRequest(s);
-                        writeObject("12" + "Es wurde an " + s + " eine Freundschaftsanfrage gesendet!");
                     }
                 }
                 break;

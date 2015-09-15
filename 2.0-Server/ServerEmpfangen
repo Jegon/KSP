@@ -9,7 +9,7 @@ als aller 1. (noch im PortListener) den Usernamen
 04  request: userhashmap aktualisieren -> nur für den Sender
 05  request: importantNotifcations (nur 1x am !nfang)
 06  request: willkommensnachricht
-07  request: aktuelle InfoTab-Seite
+07  request: aktuelle InfoTab-Seite + Filter für auf diese Seite bleiben
 08  request: aktuelle Programm pfade
 09
 10  bitte mit blablabla befreunden!

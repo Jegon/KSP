@@ -17,7 +17,7 @@ public class Main extends Application {
     public static PortListener portListener;
     public static UserVerwaltung userVerwaltung;
     private ArgReader argReader;
-    static String infoTab = "http://purple.com/purple.html";
+    static String infoTab = "swaggaboisarehere.html|||false";//todo standard seite
     public static String programmcom = " | | | | |";
 
     public static boolean createPortListener(int port) {

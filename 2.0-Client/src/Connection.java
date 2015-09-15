@@ -80,7 +80,7 @@ public class Connection extends Thread {
         }
     }
 
-    private void action(String s) throws IOException {
+    private void action(String s) throws IOException{
         int k = Integer.parseInt(s.substring(0, 2));
         s = s.substring(2);
         switch (k) {
@@ -103,7 +103,9 @@ public class Connection extends Thread {
                 Main.rootPane.rechteLeiste.notifications.leeren();
                 break;
             case 6:
-                Main.rootPane.tabMitte.updateInofs(s);
+                break;
+            case 7:
+                Main.rootPane.tabMitte.updateInfos(s);
                 break;
             case 8:
                 Main.rootPane.rechteLeiste.updateProgramme(s);

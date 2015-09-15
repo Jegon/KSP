@@ -261,6 +261,7 @@ public class RechteLeiste extends Accordion {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
+                System.out.println("RechteLeiste.rankdep()");//todo remove - manchmal buggt das hier (getPanes().add(userPane);)
                 if(Main.users.thisUser.getRang().equals("mod") || Main.users.thisUser.getRang().equals("admin")){
                     sp.setContent(provbox);
                     getPanes().add(userPane);

@@ -9,6 +9,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import org.w3c.dom.Document;
 
 /**
  * Created by Jegoni on 04.06.2015.
@@ -19,6 +20,8 @@ public class TabMitte extends TabPane {
     private final Tab josamilude;
     private final Tab infos;
     private final WebEngine infosWebEngine;
+    private String filterpfad;
+    private String pfad;
 
     TabMitte() {
         infos = new Tab("Infos");
@@ -81,13 +84,21 @@ public class TabMitte extends TabPane {
     public void update() {
     }
 
-    public void updateInofs(final String pfad){
+    public void updateInfos(final String input){
+        if(!input.contains("|||"))
+            throw new NullPointerException("TabMitte.updateInfos(): es konnte im input string nicht \"|||\" gefunden werden!");
+        pfad = input.substring(0, input.indexOf("|||"));
+        filterpfad = input.substring(input.indexOf("|||") + 3);
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
                 infosWebEngine.load(pfad);
             }
         });
+        if(filterpfad.equals("false"))
+            infosWebEngine.locationProperty().removeListener(infoW);
+        else
+            infosWebEngine.locationProperty().addListener(infoW);
     }
 
     void rankdep(){
@@ -102,4 +113,17 @@ public class TabMitte extends TabPane {
             }
         });
     }
+
+    private ChangeListener<String> infoW = new ChangeListener<String>() {
+        @Override
+        public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+            if (!(t1.contains(filterpfad)))
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        infosWebEngine.load(pfad);
+                    }
+                });
+        }
+    };
 }

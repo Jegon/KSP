@@ -18,7 +18,7 @@ public class UserTreeCellFabrik extends TreeCell<String> {
 
     public UserTreeCellFabrik() {
         user = null;
-        MenuItem testItem = new MenuItem("Nur fürs Testen du Lappen");
+        MenuItem testItem = new MenuItem("Make Smth");
         removeFriend = new MenuItem("Entfreunde mich!");
         addFriend = new MenuItem("Befreunde mich!");
         contextMenuYF.getItems().addAll(testItem, removeFriend);
